@@ -9,6 +9,7 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [login, setLogin] = useState(false);
+  const [isok, setisok ] = useState(false);
 
   const handleSubmit = (e) => {
     // prevent the form from refreshing the whole page
@@ -30,9 +31,8 @@ export default function Login() {
         cookies.set("TOKEN", result.data.token, {
           path: "/",
         });
-        debugger;
+        setisok(true)
         // redirect user to the auth page
-        window.location.href = "/auth";
 
         setLogin(true);
       })
@@ -85,6 +85,8 @@ export default function Login() {
           <p className="text-danger">You Are Not Logged in</p>
         )}
       </Form>
+
+      {isok && <h1>ok</h1>}
     </>
   );
 }
