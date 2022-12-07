@@ -26,11 +26,11 @@ export default function Login() {
     // make the API call
     axios(configuration)
       .then((result) => {
-        debugger;
         // set the cookie
         cookies.set("TOKEN", result.data.token, {
           path: "/",
         });
+        debugger;
         // redirect user to the auth page
         window.location.href = "/auth";
 
