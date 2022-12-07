@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import axios from "axios";
 import Cookies from "universal-cookie";
+import AuthComponent from "./AuthComponent";
 const cookies = new Cookies();
 
 export default function Login() {
@@ -43,6 +44,7 @@ export default function Login() {
 
   return (
     <>
+    {(isok === false) && <>
       <h2>Login</h2>
       <Form onSubmit={(e) => handleSubmit(e)}>
         {/* email */}
@@ -85,8 +87,8 @@ export default function Login() {
           <p className="text-danger">You Are Not Logged in</p>
         )}
       </Form>
-
-      {isok && <h1>ok</h1>}
+    </>}
+      {(isok === true) && <AuthComponent />}
     </>
   );
 }
