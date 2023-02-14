@@ -18,7 +18,7 @@ export default function Login() {
     // set configurations
     const configuration = {
       method: "POST",
-      url: "https://izacdev.herokuapp.com/login",
+      url: "https://projmongodbtransp.cyclic.app/login",
       data: {
         email,
         password,
