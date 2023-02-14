@@ -63,7 +63,7 @@ const  Programas = () =>{
   const fetchConvenios = (data) =>{
     const configuration = {
       method: "get",
-      url: `http://localhost:3000/programa/anodisponibilizacao=${anoDisponibilizacao}&situacao=${sitPrograma}&codorgao=${codOrgPrograma}&id=${codPrograma}&uf=${uf}&qualificacaoProponente=${optionProponente}`,
+      url: `https://projmongodbtransp.cyclic.app/programa/anodisponibilizacao=${anoDisponibilizacao}&situacao=${sitPrograma}&codorgao=${codOrgPrograma}&id=${codPrograma}&uf=${uf}&qualificacaoProponente=${optionProponente}`,
     };
     console.log(configuration)
     axios(configuration)
