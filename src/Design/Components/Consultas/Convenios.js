@@ -26,7 +26,7 @@ const  Convenios = () =>{
     const fetchConvenios = (data) =>{
       const configuration = {
         method: "get",
-        url: `http://localhost:3000/convenio/municipio=${codigoSIAFI}&orgao=${orgaoSiafi}&cnpj=${cnpj}`,
+        url: `https://projmongodbtransp.cyclic.app/convenio/municipio=${codigoSIAFI}&orgao=${orgaoSiafi}&cnpj=${cnpj}`,
       };
       axios(configuration)
         .then((result) => {
